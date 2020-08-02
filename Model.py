@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Erickson, Holly
-DSC650 WEEK 11
 
 1. Movie Recommendation Engine
 
@@ -55,8 +54,7 @@ Create a movie recommendation model using collaborative filtering.
 train, test = df_join.randomSplit([0.8, 0.2], seed = 2018)
 
 #%%
-# After fitting your model using the training dataset, calculate the predictions on the test dataset 
-#and use the RegressionEvaluator to calculate the root-mean-square error of the model.
+# Use the RegressionEvaluator to calculate the root-mean-square error of the model.
 
 als = ALS(maxIter=5, regParam=0.01, userCol="userId", itemCol="movieId", ratingCol="rating",
           coldStartStrategy="drop")
